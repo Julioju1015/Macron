@@ -1,0 +1,83 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<title>Macron ! / Julioju</title>
+	<meta name="robots" content="index, no follow">
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<link href='../fonts.googleapis.com/css8949.css?family=Just+Me+Again+Down+Here' rel='stylesheet' type='text/css'>
+	<!-- Favicon -->
+	<link rel="icon" href="images/drapeau_france.gif">
+	
+	<!--  css -->
+	<link rel="stylesheet" type="text/css" href="style.css" media="screen" />
+
+	<!-- Style Configuration -->
+	<link rel="stylesheet" type="text/css" href="line_1.css" media="screen" />
+			
+	<!-- jQuery -->
+	<script type="text/javascript" src="lib/jquery.js"></script>
+	<script type="text/javascript" src="lib/jquery.background.js"></script>
+	<script type="text/javascript" src="lib/jquery.countdown.min.js"></script>
+	<script type="text/javascript" src="lib/jquery.cycle.all.min.js"></script>
+	<script type="text/javascript" src="lib/jquery.ufvalidator.js"></script>
+	<script type="text/javascript" src="lib/gen_validatorv31.js" ></script>
+	<script type="text/javascript" src="lib/walliness.js"></script>
+	
+	<!-- Cufon -->
+	<script type="text/javascript" src="lib/cufon-yui.js" ></script>
+	<script type="text/javascript" src="lib/TitilliumText22L_Th_100.font.js"></script>
+	<script type="text/javascript">
+		Cufon.replace('h1', {
+			textShadow: '#171717 1px 1px'
+		});		
+	</script>
+
+	<script type="text/javascript">
+	$(function () {		
+		$('#subscribe-button').formValidator({
+			onSuccess	: function() { console.log('Success!'); },
+			scope		: '#newsletterForm',
+			errorDiv	: '#errorDiv1'
+		});	
+		$('#cache').live('click', function(){
+			var date = new Date();
+			date.setTime(date.getTime()+(60*60*24*30));
+			var expires = "; expires="+date.toGMTString();
+			document.cookie = 'pub=1'+expires;
+			$(".pub").animate({ opacity: 0 });
+		});		
+		$('.share').delay(5000).fadeIn(500);
+		$('#social_plugins').delay(3000).fadeIn(500);
+	});
+	</script>
+	<script type="text/javascript">
+	var _gaq = _gaq || [];
+	_gaq.push(['_setAccount', 'UA-21572038-4']);
+	</script>
+</head>
+<body>
+<center>
+			<div id="contents">
+				<div id="progress-spot"><center><br>
+					<h1>Combien de temps devrons-nous encore le supporter ?!</h1>
+					<p>Temps estimé avant le départ d'<u>Emmanuel Macron</u> :</p>
+					<ul id="countdown-spawn">
+						<li id="days"></li>
+						<li id="hours"></li>
+						<li id="minutes"></li>
+						<li id="seconds"></li>				
+					</ul>
+					<ul id="countdown-infos">
+						<li id="infos_days">Jours</li>
+						<li id="infos_hours">Heures</li>
+						<li id="infos_minutes">Minutes</li>
+						<li id="infos_seconds">Secondes</li>				
+					</ul>
+				</div>
+  		</div>
+			<div id="footer">
+				<p>Avec La République En Marche -> La France doit être une chance pour <s>tous</s> -> <a data-scroll target="blank" href="https://discord.gg/tEnS62E">Julioju</a> &copy;</p>			
+			</div>
+
+</body>
+</html>
